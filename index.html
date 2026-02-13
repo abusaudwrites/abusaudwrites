@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abusaud Writes</title>
+
+    <!-- WEBSITE DESCRIPTION -->
+    <meta name="description" content="Abusaud Writes is an Islamic YouTube channel featuring Naat, Nasheed, Quran recitation and Islamic content. Watch and get inspired.">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            background: radial-gradient(circle at top, #0a2a43, #000);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        /* Glow animation */
+        .container {
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            animation: glow 2s infinite alternate;
+        }
+
+        p {
+            font-size: 1.2rem;
+            opacity: 0;
+            animation: slideUp 2s ease forwards;
+            animation-delay: 1s;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #1aa3ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            animation: slideUp 2s ease forwards;
+            animation-delay: 1.5s;
+            opacity: 0;
+        }
+
+        a:hover {
+            background: #66ccff;
+            box-shadow: 0 0 15px #66ccff;
+        }
+
+        /* Animations */
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #1aa3ff;
+            }
+            to {
+                text-shadow: 0 0 25px #66ccff;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Abusaud Writes</h1>
+        <p>Islamic Naat • Nasheed • Quran Recitation</p>
+        <a href="https://youtube.com/@abusaudwrites?si=5dP2CtuE755xC2hI" target="_blank">
+            Visit YouTube Channel
+        </a>
+    </div>
+</body>
+</html>
