@@ -1,106 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Abusaud Writes</title>
+<meta charset="UTF-8">
+<title>Abusaud Writes | Royal Islamic Platform</title>
 
-    <!-- WEBSITE DESCRIPTION -->
-    <meta name="description" content="Abusaud Writes is an Islamic YouTube channel featuring Naat, Nasheed, Quran recitation and Islamic content. Watch and get inspired.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Abusaud Writes by Mohammed Hamdan Abusaud – Luxury Islamic Dawah Platform.">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            height: 100vh;
-            background: radial-gradient(circle at top, #0a2a43, #000);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
+body{
+  font-family:'Segoe UI',sans-serif;
+  background:radial-gradient(circle at top,#0a2a43,#020b14);
+  color:#fff;
+}
 
-        /* Glow animation */
-        .container {
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
-        }
+/* LOADER */
+#loader{
+  position:fixed;
+  inset:0;
+  background:#020b14;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  animation:hide 4.5s forwards;
+}
 
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            animation: glow 2s infinite alternate;
-        }
+.salaam{
+  font-size:28px;
+  color:#f5d76e;
+  margin-bottom:25px;
+  opacity:0;
+  animation:salaamFade 2s forwards;
+}
 
-        p {
-            font-size: 1.2rem;
-            opacity: 0;
-            animation: slideUp 2s ease forwards;
-            animation-delay: 1s;
-        }
+#loader img{
+  width:230px;
+  opacity:0;
+  animation:logoIn 2s forwards;
+  animation-delay:2s;
+}
 
-        a {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 25px;
-            background: #1aa3ff;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 1.1rem;
-            transition: 0.3s;
-            animation: slideUp 2s ease forwards;
-            animation-delay: 1.5s;
-            opacity: 0;
-        }
+@keyframes hide{
+  0%{opacity:1;}
+  85%{opacity:1;}
+  100%{opacity:0;visibility:hidden;}
+}
 
-        a:hover {
-            background: #66ccff;
-            box-shadow: 0 0 15px #66ccff;
-        }
+@keyframes salaamFade{
+  to{opacity:1;}
+}
 
-        /* Animations */
-        @keyframes glow {
-            from {
-                text-shadow: 0 0 10px #1aa3ff;
-            }
-            to {
-                text-shadow: 0 0 25px #66ccff;
-            }
-        }
+@keyframes logoIn{
+  from{opacity:0;transform:scale(.7);}
+  to{opacity:1;transform:scale(1);}
+}
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
+/* HEADER */
+header{
+  text-align:center;
+  padding:70px 20px 40px;
+}
 
-        @keyframes slideUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+.logo{
+  width:190px;
+  display:block;
+  margin:auto;
+}
+
+h1{
+  margin-top:18px;
+  font-size:3rem;
+  color:#f5d76e;
+  animation:glow 2s infinite alternate;
+}
+
+.tagline{opacity:.9}
+
+/* CONTAINER */
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+/* CARD */
+.card{
+  margin-top:45px;
+  padding:35px;
+  border-radius:22px;
+  background:rgba(255,255,255,.09);
+  backdrop-filter:blur(14px);
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+
+/* LIGHT SWEEP */
+.card::before{
+  content:"";
+  position:absolute;
+  top:0;left:-100%;
+  width:100%;height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.25),transparent);
+  animation:sweep 6s infinite;
+}
+
+@keyframes sweep{
+  to{left:120%;}
+}
+
+/* HIGHLIGHT */
+.highlight{
+  color:#f5d76e;
+  font-weight:bold;
+  text-shadow:0 0 15px #f5d76e;
+}
+
+/* SHEIKH SPECIAL */
+.sheikh{
+  border:1px solid rgba(245,215,110,.5);
+  box-shadow:0 0 30px rgba(245,215,110,.25);
+}
+
+.badge{
+  display:inline-block;
+  margin-bottom:12px;
+  padding:6px 14px;
+  border-radius:20px;
+  background:rgba(245,215,110,.15);
+  color:#f5d76e;
+  font-size:14px;
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:22px;
+  padding:12px 32px;
+  background:linear-gradient(135deg,#f5d76e,#fff);
+  color:#062f22;
+  border-radius:30px;
+  font-weight:bold;
+  text-decoration:none;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  left:-100%;
+  background:rgba(255,255,255,.6);
+  transform:skewX(-20deg);
+}
+
+.btn:hover::after{animation:shine .7s forwards;}
+@keyframes shine{to{left:120%;}}
+
+a{color:#f5d76e;text-decoration:none;font-weight:bold;}
+
+footer{
+  text-align:center;
+  margin:70px 0 30px;
+  opacity:.85;
+}
+
+/* GLOW */
+@keyframes glow{
+  from{text-shadow:0 0 12px #f5d76e;}
+  to{text-shadow:0 0 35px #fff;}
+}
+</style>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Abusaud Writes</h1>
-        <p>Islamic Naat • Nasheed • Quran Recitation</p>
-        <a href="https://youtube.com/@abusaudwrites?si=5dP2CtuE755xC2hI" target="_blank">
-            Visit YouTube Channel
-        </a>
-    </div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="salaam">
+    اَلسَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ
+  </div>
+  <img src="logo.jpg" alt="Abusaud Writes Logo">
+</div>
+
+<header>
+  <img src="logo.jpg" class="logo" alt="Abusaud Writes">
+  <h1>Abusaud Writes</h1>
+  <p class="tagline">Royal Islamic Dawah Platform</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+  <p>
+    Assalamu Alaikum,<br><br>
+    My name is <span class="highlight">Mohammed Hamdan Abusaud</span>.<br>
+    Sharing Quran, Naat, Nasheed & authentic Islamic knowledge.
+  </p>
+</div>
+
+<div class="card">
+  <p>My YouTube Channel</p>
+  <a class="btn" href="https://youtube.com/@abusaudwrites" target="_blank">
+    ▶ Abusaud Writes
+  </a>
+</div>
+
+<div class="card sheikh">
+  <div class="badge">Respected Sheikh</div>
+  <p>
+    ▶ <a href="https://youtube.com/@alkamaalchannel?si=6rn8qgsKSENFi_Mi" target="_blank">
+      Al Kamaal Channel
+    </a>
+  </p>
+  <p>
+    🌐 <a href="https://www.silsilaekamaliya.com/" target="_blank">
+      silsilaekamaliya.com
+    </a>
+  </p>
+</div>
+
+<div class="card">
+  <p>
+    📧 Contact<br>
+    <a href="mailto:mdhamdanabusaud@gmail.com">
+      mdhamdanabusaud@gmail.com
+    </a>
+  </p>
+</div>
+
+<footer>
+  © 2026 <span class="highlight">Mohammed Hamdan Abusaud</span> | Abusaud Writes
+</footer>
+
+</div>
+
 </body>
 </html>
